@@ -1,0 +1,62 @@
+[
+  {
+    "name" : "Zupa dyniowa",
+    "photo" : ",./assets/dyniowa.jpeg",
+    "category": "SOUP",
+    "avgMark" : "4,5",
+    "difficulty" : "MEDIUM",
+    "price" : "niska",
+    "cookingTime" : "30 min",
+    "ingredients" : "1 mała dynia Hokkaido (do 1 kg) 2 ziemniaki 2 marchewki 1 litr bulionu (wcześniej ugotowanego, ewentualnie z kostki rosołowej) 1 mała cebula sok z połowy cytryny ½ łyżeczki zmielonego imbiru w proszku ",
+    "nvalues" : "witamina A – 2mg/100g, witamina B1 – 50mcg/100g, witamina B2 – 60mcg/100g, witamina B6 – 0,06mg/100g, witamina C – 8mg/100g, witamina E – 1,06mg/100g, witamina K – 1,1ug/100g, tiaminy – 0,5mg/100g, ",
+    "preparing" : "Dynię umyć, przekroić na pół, oczyścić z pestek i włókien. Następnie pokroić w kostkę razem ze skórką. Ziemniaki i marchewki umyć, obrać i pokroić w kostkę. Cebulę obrać i pokroić w kostkę."
+  },
+  {
+    "name" : "Kalafior zapiekany pod sosem serowym",
+    "photo" : "./assets/kalafior.jpeg",
+    "category": "SOUP",
+    "avgMark" : "3,0",
+    "difficulty" : "MEDIUM",
+    "price" : "duża",
+    "cookingTime" : "45 min",
+    "ingredients" : "1 kalafior 25 g masła 2 łyzki mąki pszennej 300 ml mleka 150 g startego żółtego sera 3 łyżki płatków migdałów",
+    "nvalues" : "zdrowe, wiele węglowodanów",
+    "preparing" : "1. Kalafiora umyć, oddzielić różyczki, ugotować w posolonej wodzie. 2. Ułożyć w naczyniu do zapiekania. 3. Na patelni roztopić masło, dodać mąkę i chwilę smażyć, co chwilę mieszając."
+  },
+  {
+    "name" : "Wiosenna sałatka z mango i bratkami",
+    "photo" : "./assets/salatka.jpeg",
+    "category": "SOUP",
+    "avgMark" : "5,0",
+    "difficulty" : "MEDIUM",
+    "price" : "niska",
+    "cookingTime" : "25 min",
+    "ingredients" : "1dojrzałe mango 0,5 opakowania mozzarelli mini 2 łyżki orzechów nerkowca 1 garść sałat mix kilka kwiatków bratka",
+    "nvalues" : "dużo witamin z grupy D",
+    "preparing" : "1. Sałatę układam na talerzu . Na to obrane i pokrojone w kostkę mango. Dodaję osączoną z zalewy mini mozzarellę. 2. Orzechy nerkowca prażę na suchej patelni . Układam kwiatki bratka na sałatce."
+  },
+  {
+    "name" : "Bułeczki jogurtowe",
+    "photo" : "./assets/bulki.jpeg",
+    "category": "SOUP",
+    "avgMark" : "4,3",
+    "difficulty" : "MEDIUM",
+    "price" : "niska",
+    "cookingTime" : "60 min",
+    "ingredients" : "350 g mąki pszennej 230 g jogurtu naturalnego 16 g proszku do pieczenia 70 ml oleju rzepakowego 2 szczypty soli łyżeczka cukru Dodatkowo: odrobina mlekaodrobina maku, sezamu lub słonecznika",
+    "nvalues" : "pożywne i smaczne",
+    "preparing" : "1. Zagnieść: mąkę, jogurt, proszek do pieczenia, olej, sól i cukier. Gotowe ciasto przełożyć na stolnicę obsypaną mąką. Odrywać po kawałku i formować. Bułeczki w odstępach ułożyć na blasze wyłożonej papierem do pieczenia."
+  },
+  {
+    "name" : "Pizzerinki ze szparagami",
+    "photo" : "./assets/pizza.jpeg",
+    "category": "SOUP",
+    "avgMark" : "5,0",
+    "difficulty" : "MEDIUM",
+    "price" : "średnia",
+    "cookingTime" : "30 min",
+    "ingredients" : "1 saszetka suszonych drożdży instant (7 g), 300 ml ciepłej wody, 1 łyżeczka cukru, 2 łyżki masła, 500 g mąki pszennej",
+    "nvalues" : "Smaczne pizzerinki z dodatkiem szparagów, cebuli i kiełbaski. Idealnie pasują z ulubionym sosem. Są bardzo smaczne również na zimno.",
+    "preparing" : "1. Ciepłą wodę wlewamy do miski. Wsypujemy drożdże, sól, cukier i bazylię. Mieszamy i odstawiamy na 15 minut. 2. Mąkę przesiewamy do miski, wlewamy rozczyn i zagniatamy ciasto."
+  }
+]
