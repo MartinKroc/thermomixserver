@@ -16,6 +16,16 @@ public class UserController {
 
     private final UserService userService;
 
+    @GetMapping("hello")
+    public String hello() {
+        return "it works";
+    }
+
+    @GetMapping("test")
+    public String test() {
+        return userService.test();
+    }
+
     @PostMapping("signup")
     public ResponseEntity<String> signupUser(@RequestBody SignupDto signupDto) {
         return userService.signupUser(signupDto);

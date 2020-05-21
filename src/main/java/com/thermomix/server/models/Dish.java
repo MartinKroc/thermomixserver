@@ -20,7 +20,7 @@ public class Dish {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
     private String name;
     private String photo;
@@ -37,7 +37,7 @@ public class Dish {
     @Enumerated(value = EnumType.STRING)
     private DishDificulty difficulty;
 
-    @OneToMany(mappedBy = "dishId")
+    @OneToMany(mappedBy = "dish")
     private List<Opinion> opinions;
 
     @ManyToMany(mappedBy = "userDishes")

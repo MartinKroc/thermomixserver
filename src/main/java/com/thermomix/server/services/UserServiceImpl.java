@@ -22,4 +22,9 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    @Override
+    public String test() {
+        return "test works";
+    }
+
 }

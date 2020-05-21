@@ -17,7 +17,7 @@ public class Opinion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
     private String content;
     private String mark;
@@ -28,5 +28,5 @@ public class Opinion {
 
     @ManyToOne()
     @JoinColumn(name = "dish_id")
-    private Dish dishId;
+    private Dish dish;
 }

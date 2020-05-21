@@ -18,7 +18,7 @@ public class OpinionController {
     private final OpinionService opinionService;
 
     @GetMapping("{id}")
-    public ResponseEntity<List<OpinionDto>> getOpinionsByDish(@PathVariable("id") int dishId) {
+    public List<OpinionDto> getOpinionsByDish(@PathVariable("id") int dishId) {
         return opinionService.getOpinionsByDish(dishId);
     }
 

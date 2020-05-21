@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public interface OpinionService {
 
-    ResponseEntity<List<OpinionDto>> getOpinionsByDish(int dishId);
+    List<OpinionDto> getOpinionsByDish(int dishId);
 
     ResponseEntity<OpinionDto> createOpinion(OpinionDto opinionDto);
 
