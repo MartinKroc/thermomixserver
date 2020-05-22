@@ -5,6 +5,7 @@ import com.thermomix.server.services.DishService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,16 +29,19 @@ public class DishController {
     }
 
     @PostMapping
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<DishDto> addDish(@RequestBody DishDto dishDto) {
         return dishService.addDish(dishDto);
     }
 
     @DeleteMapping("{id}")
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity deleteDish(@PathVariable("id") int dishId) {
         return dishService.deleteDish(dishId);
     }
 
     @PutMapping("{id}")
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity editDish(@PathVariable("id") int dishId, @RequestBody DishDto dishDto) {
         return dishService.editDish(dishId, dishDto);
     }

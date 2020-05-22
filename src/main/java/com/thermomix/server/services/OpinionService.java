@@ -11,6 +11,6 @@ public interface OpinionService {
 
     List<OpinionDto> getOpinionsByDish(int dishId);
 
-    ResponseEntity<OpinionDto> createOpinion(OpinionDto opinionDto);
+    ResponseEntity<OpinionDto> createOpinion(String username, OpinionDto opinionDto);
 
 }

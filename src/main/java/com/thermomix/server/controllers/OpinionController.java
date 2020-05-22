@@ -2,9 +2,12 @@ package com.thermomix.server.controllers;
 
 import com.thermomix.server.dto.OpinionDto;
 import com.thermomix.server.services.OpinionService;
+import com.thermomix.server.utilities.AuthMiner;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,8 +26,9 @@ public class OpinionController {
     }
 
     @PostMapping
-    public ResponseEntity<OpinionDto> createOpinion(@RequestBody OpinionDto opinionDto) {
-        return opinionService.createOpinion(opinionDto);
+    @PreAuthorize("hasRole('USER')")
+    public ResponseEntity<OpinionDto> createOpinion(Authentication authentication, @RequestBody OpinionDto opinionDto) {
+        return opinionService.createOpinion(AuthMiner.getUsername(authentication) , opinionDto);
     }
 
     @ExceptionHandler(value = {RuntimeException.class})

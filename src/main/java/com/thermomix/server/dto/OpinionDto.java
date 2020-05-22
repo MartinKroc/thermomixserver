@@ -11,12 +11,14 @@ public class OpinionDto {
     private String username;
     private String mark;
     private String content;
+    private Integer dishId;
 
     public static OpinionDto build(Opinion opinion) {
         return new OpinionDto(
                 opinion.getUserId().getUsername(),
                 opinion.getMark(),
-                opinion.getContent()
+                opinion.getContent(),
+                opinion.getDish().getId()
         );
     }
 }
