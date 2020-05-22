@@ -1,7 +1,7 @@
 [
   {
     "name" : "Zupa dyniowa",
-    "photo" : ",./assets/dyniowa.jpeg",
+    "photo" : "http://localhost:8080/img/dyniowa.jpeg",
     "category": "SOUP",
     "avgMark" : "4,5",
     "difficulty" : "MEDIUM",
@@ -13,7 +13,7 @@
   },
   {
     "name" : "Kalafior zapiekany pod sosem serowym",
-    "photo" : "./assets/kalafior.jpeg",
+    "photo" : "http://localhost:8080/img/kalafior.jpeg",
     "category": "SOUP",
     "avgMark" : "3,0",
     "difficulty" : "MEDIUM",
@@ -25,7 +25,7 @@
   },
   {
     "name" : "Wiosenna sałatka z mango i bratkami",
-    "photo" : "./assets/salatka.jpeg",
+    "photo" : "http://localhost:8080/img/salatka.jpeg",
     "category": "SOUP",
     "avgMark" : "5,0",
     "difficulty" : "MEDIUM",
@@ -37,7 +37,7 @@
   },
   {
     "name" : "Bułeczki jogurtowe",
-    "photo" : "./assets/bulki.jpeg",
+    "photo" : "http://localhost:8080/img/bulki.jpeg",
     "category": "SOUP",
     "avgMark" : "4,3",
     "difficulty" : "MEDIUM",
@@ -49,7 +49,7 @@
   },
   {
     "name" : "Pizzerinki ze szparagami",
-    "photo" : "./assets/pizza.jpeg",
+    "photo" : "http://localhost:8080/img/pizza.jpeg",
     "category": "SOUP",
     "avgMark" : "5,0",
     "difficulty" : "MEDIUM",
