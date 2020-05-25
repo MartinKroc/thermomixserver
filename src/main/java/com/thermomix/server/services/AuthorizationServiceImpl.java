@@ -20,6 +20,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -53,6 +55,13 @@ public class AuthorizationServiceImpl implements AuthorizationService {
         User user = new User(signUpDto.getUsername(),
                 passwordEncoder.encode(signUpDto.getPassword()),
                 roles);
+
+        user.setRegDate(LocalDate.now());
+        user.setCountry("Polska");
+        user.setLanguage("Polski");
+        user.setSysMeter("metryczne");
+        user.setLastClean(LocalDate.now());
+
 
         userRepository.save(user);
 

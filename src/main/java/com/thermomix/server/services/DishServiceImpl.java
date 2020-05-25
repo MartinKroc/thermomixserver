@@ -2,7 +2,11 @@ package com.thermomix.server.services;
 
 import com.thermomix.server.dto.DishDto;
 import com.thermomix.server.models.Dish;
+import com.thermomix.server.models.Opinion;
+import com.thermomix.server.models.User;
 import com.thermomix.server.repositories.DishRepository;
+import com.thermomix.server.repositories.OpinionRepository;
+import com.thermomix.server.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -15,9 +19,26 @@ import java.util.stream.Collectors;
 public class DishServiceImpl implements DishService {
 
     private final DishRepository dishRepository;
+    private final OpinionRepository opinionRepository;
 
     @Override
     public List<DishDto> getAllDishes() {
+
+/*        for(long i = dishRepository.count();i>0;i--) {
+            List<Integer> dishmark = opinionRepository.findByDishId((int)i).stream().map(mark -> Integer.parseInt(mark.getMark())).collect(Collectors.toList());
+
+            int result = dishmark
+                    .stream()
+                    .reduce(0, (subtotal, element) -> subtotal + element);
+
+            int resu = result/5;
+
+            Dish dish = dishRepository.findById((int)i).orElseThrow(() -> new RuntimeException("Danie nie zostało znalezione"));
+
+            dish.setAvgMark(String.valueOf(resu));
+            dishRepository.save(dish);
+        }*/
+
         return dishRepository.findAll().stream().map(dish -> DishDto.build(dish)).collect(Collectors.toList());
     }
 
@@ -31,9 +52,9 @@ public class DishServiceImpl implements DishService {
         Dish dish = Dish.builder()
                 .name(dishDto.getName())
                 .avgMark(dishDto.getAvgMark())
-                .category(dishDto.getCategory())
+                .category(dishDto.getCategoryRaw())
                 .cookingTime(dishDto.getCookingTime())
-                .difficulty(dishDto.getDifficulty())
+                .difficulty(dishDto.getDifficultyRaw())
                 .ingredients(dishDto.getIngredients())
                 .nvalues(dishDto.getNvalues())
                 .photo(dishDto.getPhoto())
@@ -57,9 +78,9 @@ public class DishServiceImpl implements DishService {
         Dish dish = dishRepository.findById(dishId).orElseThrow(() -> new RuntimeException("Danie nie zostało znalezione"));
 
         dish.setAvgMark(dishDto.getAvgMark());
-        dish.setCategory(dishDto.getCategory());
+        dish.setCategory(dishDto.getCategoryRaw());
         dish.setCookingTime(dishDto.getCookingTime());
-        dish.setDifficulty(dishDto.getDifficulty());
+        dish.setDifficulty(dishDto.getDifficultyRaw());
         dish.setIngredients(dishDto.getIngredients());
         dish.setName(dishDto.getName());
         dish.setNvalues(dishDto.getNvalues());

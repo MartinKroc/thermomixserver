@@ -18,8 +18,11 @@ public class DishDto {
     private String nvalues;
     private String preparing;
 
-    private DishCategory category;
-    private DishDificulty difficulty;
+    private String category;
+    private String difficulty;
+
+    private DishCategory categoryRaw;
+    private DishDificulty difficultyRaw;
 
     public static DishDto build(Dish dish) {
         return new DishDto(
@@ -32,6 +35,8 @@ public class DishDto {
                 dish.getIngredients(),
                 dish.getNvalues(),
                 dish.getPreparing(),
+                dish.getCategory().toString(),
+                dish.getDifficulty().toString(),
                 dish.getCategory(),
                 dish.getDifficulty()
         );

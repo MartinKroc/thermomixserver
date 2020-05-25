@@ -1,9 +1,6 @@
 package com.thermomix.server.controllers;
 
-import com.thermomix.server.dto.DishDto;
-import com.thermomix.server.dto.DishHistoryDto;
-import com.thermomix.server.dto.SigninDto;
-import com.thermomix.server.dto.SignupDto;
+import com.thermomix.server.dto.*;
 import com.thermomix.server.services.AuthorizationService;
 import com.thermomix.server.services.UserService;
 import com.thermomix.server.utilities.AuthMiner;
@@ -55,6 +52,26 @@ public class UserController {
     @GetMapping("history/add/{dishId}")
     public ResponseEntity<DishHistoryDto> addUserDish(Authentication authentication, @PathVariable("dishId")int dishId) {
         return userService.addUserDish(AuthMiner.getUsername(authentication), dishId);
+    }
+
+    @GetMapping("options")
+    public ResponseEntity<OptionDto> getOptions(Authentication authentication) {
+        return userService.getOptions(AuthMiner.getUsername(authentication));
+    }
+
+    @PutMapping("options")
+    public ResponseEntity<ChangeOptionDto> setOptions(Authentication authentication, @RequestBody ChangeOptionDto changeOptionDto) {
+        return userService.setOptions(AuthMiner.getUsername(authentication), changeOptionDto);
+    }
+
+    @GetMapping("options/update")
+    public ResponseEntity<String> checkUpdate(Authentication authentication) {
+        return userService.checkUpdate(AuthMiner.getUsername(authentication));
+    }
+
+    @GetMapping("options/cleaning")
+    public ResponseEntity<String> changeCleaning(Authentication authentication) {
+        return userService.changeCleaning(AuthMiner.getUsername(authentication));
     }
 
     @ExceptionHandler(value = {RuntimeException.class})

@@ -1,9 +1,6 @@
 package com.thermomix.server.services;
 
-import com.thermomix.server.dto.DishDto;
-import com.thermomix.server.dto.DishHistoryDto;
-import com.thermomix.server.dto.SigninDto;
-import com.thermomix.server.dto.SignupDto;
+import com.thermomix.server.dto.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -21,4 +18,12 @@ public interface UserService {
     ResponseEntity<DishHistoryDto> getUserDishes(String username);
 
     ResponseEntity<DishHistoryDto> addUserDish(String username, int dishId);
+
+    ResponseEntity<OptionDto> getOptions(String username);
+
+    ResponseEntity<ChangeOptionDto> setOptions(String username, ChangeOptionDto changeOptionDto);
+
+    ResponseEntity<String> checkUpdate(String username);
+
+    ResponseEntity<String> changeCleaning(String username);
 }

@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -25,6 +26,14 @@ public class User {
 
     private String username;
     private String password;
+
+    private String language;
+    private String country;
+    private int voiceLevel;
+    private int screenBright;
+    private String sysMeter;
+    private LocalDate regDate;
+    private LocalDate lastClean;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
